@@ -17,7 +17,7 @@ pipelines:
 
           - docker tag prueba1:latest prueba1:latest
           # build the Docker image (this will use the Dockerfile in the root of the repo)
-          - docker build -t prueba1:latest
+          - docker build .
           # authenticate with the Docker Hub registry
           # - docker login --username $DOCKER_HUB_USERNAME --password $DOCKER_HUB_PASSWORD
           # push the new Docker image to the Docker registry
