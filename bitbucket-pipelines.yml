@@ -15,9 +15,9 @@ pipelines:
           #- export IMAGE_NAME=your-Dockerhub-account/your-docker-image-name:$BITBUCKET_COMMIT
           - export IMAGE_NAME=registry-devops.agea.com.ar/prueba1:latest
 
-          - docker tag prueba1 .
+          - docker tag prueba1:latest prueba1:latest
           # build the Docker image (this will use the Dockerfile in the root of the repo)
-          - docker build -t prueba1 .
+          - docker build -t prueba1:latest
           # authenticate with the Docker Hub registry
           # - docker login --username $DOCKER_HUB_USERNAME --password $DOCKER_HUB_PASSWORD
           # push the new Docker image to the Docker registry
